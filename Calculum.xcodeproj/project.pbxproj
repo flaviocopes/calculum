@@ -1,0 +1,500 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 77;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		01FC88445396288643258E71 /* Models.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE7EDB00C7777468AB109743 /* Models.swift */; };
+		139C52775BFAAE5A1C2F7F7D /* Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9957098ACD08C8A14DE317C8 /* Theme.swift */; };
+		22F84A6233DBCE79A8E20556 /* Library.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BDA64211B0530EDD28EB1D7 /* Library.swift */; };
+		28D9FFDAA5D3278DE7D5C291 /* CommandLineTool.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65088110449B78D06CE55A01 /* CommandLineTool.swift */; };
+		38979E22D0D347A75EB4DA3C /* AppUpdater.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8891B55D0654727A26EFAB4 /* AppUpdater.swift */; };
+		50BB5D1B0C135860D760426E /* AppModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A8343E6B81062EB0F4C9850 /* AppModel.swift */; };
+		58C5474C6684EB2F1A3EF22D /* Engine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 152C28AC3291939F98D42402 /* Engine.swift */; };
+		6194AF562229DE5CEDE1F80A /* NumberText.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52C14ABE6419AFDD538B2ECB /* NumberText.swift */; };
+		67FA2541037C098DBE265E11 /* CalculumApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 816EC58AF945C684C5B3EF88 /* CalculumApp.swift */; };
+		6BFB17C60D3B7AF1A5E92B46 /* CalculatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75460377DCB1C873F0E90B3C /* CalculatorView.swift */; };
+		6CD3F1FF4B70B3431C1450FD /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77DCBF52B1299B16A6457F29 /* SettingsView.swift */; };
+		79A8ECCD4FDBBB1732E56D1B /* CalculumCLI in Embed Dependencies */ = {isa = PBXBuildFile; fileRef = 3B709E6E1B96C6F9C5B49E8C /* CalculumCLI */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		7ACA840840E8BE89DEC98C0C /* Sections.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14890067150A7B2E1472706D /* Sections.swift */; };
+		8011058C0E2886A53735722D /* Models.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE7EDB00C7777468AB109743 /* Models.swift */; };
+		857611330D15B64BF4068993 /* SavedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDBABB54D0C9949082285AC6 /* SavedView.swift */; };
+		A675985A6192C0E2BB5922D5 /* AppIcon.icon in Resources */ = {isa = PBXBuildFile; fileRef = 2605E5255F9ED851361B9F09 /* AppIcon.icon */; };
+		C4CECA9E0AA759741CEA3A4F /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FABA5E03CFBDDF877019B6C /* main.swift */; };
+		DD5595248F0B3A87440A28C5 /* NumberText.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52C14ABE6419AFDD538B2ECB /* NumberText.swift */; };
+		ED76ED1967EDE1F140BCB9AB /* Engine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 152C28AC3291939F98D42402 /* Engine.swift */; };
+		EFFFD583D18332EA0575280E /* CompareView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43B8FFF6C630BF968228BAF7 /* CompareView.swift */; };
+		F17AA322F21CB972D9569ADC /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72B26B5F4C8891FC23FC6BBE /* ContentView.swift */; };
+		FD022FB37FBA34CF4ECA914B /* engine.js in Resources */ = {isa = PBXBuildFile; fileRef = 9F4A98FDB313340DE7A42001 /* engine.js */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		C75DE8CDD5FC7C773E1348FA /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C3BB9E49DE990CFC2472F75B /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = EBA5B53777BB642A72ED89D9;
+			remoteInfo = CalculumCLI;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		A575315C91B111D8A8D9A3B1 /* Embed Dependencies */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = Contents/Helpers;
+			dstSubfolderSpec = 1;
+			files = (
+				79A8ECCD4FDBBB1732E56D1B /* CalculumCLI in Embed Dependencies */,
+			);
+			name = "Embed Dependencies";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		14890067150A7B2E1472706D /* Sections.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sections.swift; sourceTree = "<group>"; };
+		152C28AC3291939F98D42402 /* Engine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Engine.swift; sourceTree = "<group>"; };
+		2605E5255F9ED851361B9F09 /* AppIcon.icon */ = {isa = PBXFileReference; lastKnownFileType = wrapper.icon; path = AppIcon.icon; sourceTree = "<group>"; };
+		2FABA5E03CFBDDF877019B6C /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
+		3B709E6E1B96C6F9C5B49E8C /* CalculumCLI */ = {isa = PBXFileReference; includeInIndex = 0; path = CalculumCLI; sourceTree = BUILT_PRODUCTS_DIR; };
+		3DA9A2B10BB06B6460151242 /* Calculum.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Calculum.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		43B8FFF6C630BF968228BAF7 /* CompareView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompareView.swift; sourceTree = "<group>"; };
+		52C14ABE6419AFDD538B2ECB /* NumberText.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NumberText.swift; sourceTree = "<group>"; };
+		5BDA64211B0530EDD28EB1D7 /* Library.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Library.swift; sourceTree = "<group>"; };
+		65088110449B78D06CE55A01 /* CommandLineTool.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommandLineTool.swift; sourceTree = "<group>"; };
+		6A8343E6B81062EB0F4C9850 /* AppModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppModel.swift; sourceTree = "<group>"; };
+		72B26B5F4C8891FC23FC6BBE /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		75460377DCB1C873F0E90B3C /* CalculatorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculatorView.swift; sourceTree = "<group>"; };
+		77DCBF52B1299B16A6457F29 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
+		816EC58AF945C684C5B3EF88 /* CalculumApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculumApp.swift; sourceTree = "<group>"; };
+		9957098ACD08C8A14DE317C8 /* Theme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Theme.swift; sourceTree = "<group>"; };
+		9F4A98FDB313340DE7A42001 /* engine.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; path = engine.js; sourceTree = "<group>"; };
+		AE7EDB00C7777468AB109743 /* Models.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Models.swift; sourceTree = "<group>"; };
+		BDBABB54D0C9949082285AC6 /* SavedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SavedView.swift; sourceTree = "<group>"; };
+		E8891B55D0654727A26EFAB4 /* AppUpdater.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppUpdater.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXGroup section */
+		67CDBA8FA093726A42288F53 /* CalculumCLI */ = {
+			isa = PBXGroup;
+			children = (
+				2FABA5E03CFBDDF877019B6C /* main.swift */,
+			);
+			path = CalculumCLI;
+			sourceTree = "<group>";
+		};
+		6FD1070099967FFA320BBD7F /* Calculum */ = {
+			isa = PBXGroup;
+			children = (
+				2605E5255F9ED851361B9F09 /* AppIcon.icon */,
+				6A8343E6B81062EB0F4C9850 /* AppModel.swift */,
+				E8891B55D0654727A26EFAB4 /* AppUpdater.swift */,
+				75460377DCB1C873F0E90B3C /* CalculatorView.swift */,
+				816EC58AF945C684C5B3EF88 /* CalculumApp.swift */,
+				65088110449B78D06CE55A01 /* CommandLineTool.swift */,
+				43B8FFF6C630BF968228BAF7 /* CompareView.swift */,
+				72B26B5F4C8891FC23FC6BBE /* ContentView.swift */,
+				152C28AC3291939F98D42402 /* Engine.swift */,
+				5BDA64211B0530EDD28EB1D7 /* Library.swift */,
+				AE7EDB00C7777468AB109743 /* Models.swift */,
+				52C14ABE6419AFDD538B2ECB /* NumberText.swift */,
+				BDBABB54D0C9949082285AC6 /* SavedView.swift */,
+				14890067150A7B2E1472706D /* Sections.swift */,
+				77DCBF52B1299B16A6457F29 /* SettingsView.swift */,
+				9957098ACD08C8A14DE317C8 /* Theme.swift */,
+				81806AA01CF7F8B76049490A /* Resources */,
+			);
+			path = Calculum;
+			sourceTree = "<group>";
+		};
+		81806AA01CF7F8B76049490A /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				9F4A98FDB313340DE7A42001 /* engine.js */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		C6A8D30061E78F343B9B3340 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				3DA9A2B10BB06B6460151242 /* Calculum.app */,
+				3B709E6E1B96C6F9C5B49E8C /* CalculumCLI */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		F12466DF9458475D9480784B = {
+			isa = PBXGroup;
+			children = (
+				6FD1070099967FFA320BBD7F /* Calculum */,
+				67CDBA8FA093726A42288F53 /* CalculumCLI */,
+				C6A8D30061E78F343B9B3340 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		ABC0BB87AFD7B7DB84D4D8ED /* Calculum */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 164BAAD7AB8197EF46120E62 /* Build configuration list for PBXNativeTarget "Calculum" */;
+			buildPhases = (
+				AE76E69249089FEEC4BF45CB /* Sources */,
+				5431372C4A6D436550A43E13 /* Resources */,
+				A575315C91B111D8A8D9A3B1 /* Embed Dependencies */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				B6A07A6FE25AA6B5EA291C2B /* PBXTargetDependency */,
+			);
+			name = Calculum;
+			packageProductDependencies = (
+			);
+			productName = Calculum;
+			productReference = 3DA9A2B10BB06B6460151242 /* Calculum.app */;
+			productType = "com.apple.product-type.application";
+		};
+		EBA5B53777BB642A72ED89D9 /* CalculumCLI */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4E28AF8A69FD0A526F83C707 /* Build configuration list for PBXNativeTarget "CalculumCLI" */;
+			buildPhases = (
+				8CFA0BFBBE08A85D7E8CC9C6 /* Sources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = CalculumCLI;
+			packageProductDependencies = (
+			);
+			productName = CalculumCLI;
+			productReference = 3B709E6E1B96C6F9C5B49E8C /* CalculumCLI */;
+			productType = "com.apple.product-type.tool";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		C3BB9E49DE990CFC2472F75B /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = YES;
+				LastUpgradeCheck = 1430;
+				TargetAttributes = {
+					ABC0BB87AFD7B7DB84D4D8ED = {
+						ProvisioningStyle = Manual;
+					};
+					EBA5B53777BB642A72ED89D9 = {
+						ProvisioningStyle = Manual;
+					};
+				};
+			};
+			buildConfigurationList = 0811A6C0564B7B7F7BCCBCF8 /* Build configuration list for PBXProject "Calculum" */;
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				Base,
+				en,
+			);
+			mainGroup = F12466DF9458475D9480784B;
+			minimizedProjectReferenceProxies = 1;
+			preferredProjectObjectVersion = 77;
+			productRefGroup = C6A8D30061E78F343B9B3340 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				ABC0BB87AFD7B7DB84D4D8ED /* Calculum */,
+				EBA5B53777BB642A72ED89D9 /* CalculumCLI */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		5431372C4A6D436550A43E13 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A675985A6192C0E2BB5922D5 /* AppIcon.icon in Resources */,
+				FD022FB37FBA34CF4ECA914B /* engine.js in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		8CFA0BFBBE08A85D7E8CC9C6 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				ED76ED1967EDE1F140BCB9AB /* Engine.swift in Sources */,
+				8011058C0E2886A53735722D /* Models.swift in Sources */,
+				DD5595248F0B3A87440A28C5 /* NumberText.swift in Sources */,
+				C4CECA9E0AA759741CEA3A4F /* main.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AE76E69249089FEEC4BF45CB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				50BB5D1B0C135860D760426E /* AppModel.swift in Sources */,
+				38979E22D0D347A75EB4DA3C /* AppUpdater.swift in Sources */,
+				6BFB17C60D3B7AF1A5E92B46 /* CalculatorView.swift in Sources */,
+				67FA2541037C098DBE265E11 /* CalculumApp.swift in Sources */,
+				28D9FFDAA5D3278DE7D5C291 /* CommandLineTool.swift in Sources */,
+				EFFFD583D18332EA0575280E /* CompareView.swift in Sources */,
+				F17AA322F21CB972D9569ADC /* ContentView.swift in Sources */,
+				58C5474C6684EB2F1A3EF22D /* Engine.swift in Sources */,
+				22F84A6233DBCE79A8E20556 /* Library.swift in Sources */,
+				01FC88445396288643258E71 /* Models.swift in Sources */,
+				6194AF562229DE5CEDE1F80A /* NumberText.swift in Sources */,
+				857611330D15B64BF4068993 /* SavedView.swift in Sources */,
+				7ACA840840E8BE89DEC98C0C /* Sections.swift in Sources */,
+				6CD3F1FF4B70B3431C1450FD /* SettingsView.swift in Sources */,
+				139C52775BFAAE5A1C2F7F7D /* Theme.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		B6A07A6FE25AA6B5EA291C2B /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = EBA5B53777BB642A72ED89D9 /* CalculumCLI */;
+			targetProxy = C75DE8CDD5FC7C773E1348FA /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		24DFF5CFF0F629B27C8130C3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				CODE_SIGN_STYLE = Manual;
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 15.0;
+				MARKETING_VERSION = 1.0.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 6.0;
+			};
+			name = Release;
+		};
+		4227D35230F980BBB4AC70AB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				COMBINE_HIDPI_IMAGES = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = Calculum;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.productivity";
+				INFOPLIST_KEY_NSHumanReadableCopyright = "MIT License";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.flaviocopes.calculum;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		6E4D5C8E4E1EA1CD03EE0CF5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.flaviocopes.calculum.cli;
+				PRODUCT_NAME = calculum;
+				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		93D44F77A7EAB26181B72978 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				COMBINE_HIDPI_IMAGES = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = Calculum;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.productivity";
+				INFOPLIST_KEY_NSHumanReadableCopyright = "MIT License";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.flaviocopes.calculum;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		F7FD101A97802A101C6BD16C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				CODE_SIGN_STYLE = Manual;
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"$(inherited)",
+					"DEBUG=1",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 15.0;
+				MARKETING_VERSION = 1.0.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 6.0;
+			};
+			name = Debug;
+		};
+		FACCE9B47C9876DE1372F4A0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.flaviocopes.calculum.cli;
+				PRODUCT_NAME = calculum;
+				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		0811A6C0564B7B7F7BCCBCF8 /* Build configuration list for PBXProject "Calculum" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F7FD101A97802A101C6BD16C /* Debug */,
+				24DFF5CFF0F629B27C8130C3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		164BAAD7AB8197EF46120E62 /* Build configuration list for PBXNativeTarget "Calculum" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				93D44F77A7EAB26181B72978 /* Debug */,
+				4227D35230F980BBB4AC70AB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		4E28AF8A69FD0A526F83C707 /* Build configuration list for PBXNativeTarget "CalculumCLI" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6E4D5C8E4E1EA1CD03EE0CF5 /* Debug */,
+				FACCE9B47C9876DE1372F4A0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = C3BB9E49DE990CFC2472F75B /* Project object */;
+}

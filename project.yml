@@ -1,0 +1,47 @@
+name: Calculum
+options:
+  bundleIdPrefix: com.flaviocopes
+  deploymentTarget:
+    macOS: "15.0"
+settings:
+  base:
+    SWIFT_VERSION: "6.0"
+    MARKETING_VERSION: "1.0.0"
+    CURRENT_PROJECT_VERSION: "1"
+    CODE_SIGN_IDENTITY: "-"
+    CODE_SIGN_STYLE: Manual
+targets:
+  Calculum:
+    type: application
+    platform: macOS
+    sources: [Calculum]
+    dependencies:
+      - target: CalculumCLI
+        embed: true
+        codeSign: true
+        copy:
+          destination: wrapper
+          subpath: Contents/Helpers
+    settings:
+      base:
+        PRODUCT_BUNDLE_IDENTIFIER: com.flaviocopes.calculum
+        ASSETCATALOG_COMPILER_APPICON_NAME: AppIcon
+        GENERATE_INFOPLIST_FILE: YES
+        INFOPLIST_KEY_CFBundleDisplayName: Calculum
+        INFOPLIST_KEY_LSApplicationCategoryType: public.app-category.productivity
+        INFOPLIST_KEY_NSHumanReadableCopyright: "MIT License"
+  # The calculum command, built into Calculum.app/Contents/Helpers. It shares the
+  # engine and the models with the app.
+  CalculumCLI:
+    type: tool
+    platform: macOS
+    sources:
+      - CalculumCLI
+      - Calculum/Engine.swift
+      - Calculum/Models.swift
+      - Calculum/NumberText.swift
+    settings:
+      base:
+        PRODUCT_NAME: calculum
+        PRODUCT_BUNDLE_IDENTIFIER: com.flaviocopes.calculum.cli
+        SKIP_INSTALL: YES

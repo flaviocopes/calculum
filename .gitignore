@@ -1,0 +1,6 @@
+.DS_Store
+build/
+dist/
+DerivedData/
+xcuserdata/
+.cursor/hooks/state/
