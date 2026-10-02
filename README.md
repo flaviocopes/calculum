@@ -4,6 +4,8 @@ Calculum is a free Mac app with 281 calculators for everyday decisions, from ren
 
 It's the Mac version of [calculum.dev](https://calculum.dev). The calculators are the same ones, but here they run on your Mac, work offline, and keep your favorites and the calculations you saved. There's a command line tool too, so you can run any calculator from Terminal or a script.
 
+Read the announcement on my blog: [I built Calculum for Mac, 281 calculators that work offline](https://flaviocopes.com/calculum-mac/).
+
 ## Download
 
 Get `Calculum-1.0.0.zip` from the [latest release](https://github.com/flaviocopes/calculum/releases/latest), unzip it, and drag Calculum to your Applications folder. It runs on macOS 15 Sequoia or later, on Apple silicon and Intel Macs.
