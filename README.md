@@ -10,23 +10,13 @@ Read the announcement and watch the 1-minute demo on my blog: [I built Calculum 
 
 ## Download
 
-Get `Calculum-1.0.0.zip` from the [latest release](https://github.com/flaviocopes/calculum/releases/latest), unzip it, and drag Calculum to your Applications folder. It runs on macOS 15 Sequoia or later, on Apple silicon and Intel Macs.
+Get `Calculum-1.1.0.zip` from the [latest release](https://github.com/flaviocopes/calculum/releases/latest), unzip it, and drag Calculum to your Applications folder. It runs on macOS 15 Sequoia or later, on Apple silicon and Intel Macs.
 
 ### Opening it the first time
 
-Calculum isn't signed with an Apple Developer ID or notarized by Apple. So the first time you open it, macOS says it "could not verify Calculum is free of malware". Click **Done**, then allow it in one of two ways.
+Calculum is signed with my Apple Developer ID and notarized by Apple. The first time you open it, macOS asks if you're sure you want to open an app downloaded from the internet. Click **Open**.
 
-In System Settings, open **Privacy & Security** and scroll down to the message about Calculum. Click **Open Anyway**, confirm, and open the app again. The button shows up for about an hour after you try to open the app.
-
-In Terminal, remove the quarantine flag macOS adds to downloaded files, then open the app:
-
-```sh
-xattr -dr com.apple.quarantine /Applications/Calculum.app
-```
-
-The same command fixes a message saying Calculum is damaged. You don't need to turn off Gatekeeper for either option.
-
-On a work laptop you might not be able to install apps in `/Applications`. You can keep Calculum in the `Applications` folder inside your home folder, and run the command on `~/Applications/Calculum.app`. If your company blocks apps that aren't notarized, ask your IT team.
+On a work laptop you might not be able to install apps in `/Applications`. You can keep Calculum in the `Applications` folder inside your home folder instead.
 
 ### Updates
 
@@ -257,7 +247,13 @@ Open `Calculum.xcodeproj` and press `⌘R`. To build the release zip from the te
 scripts/build-release.sh
 ```
 
-It builds a universal app in `build/release/Release/Calculum.app`, with the `calculum` command inside, checks its signature, and zips it into `dist/`. The app is ad-hoc signed. A copy you build yourself opens without a warning.
+The script builds a universal app in `build/release/Release/Calculum.app`, with the `calculum` command inside, signs it with my Developer ID when that certificate is in the keychain, and ad hoc everywhere else, then zips it into `dist/`. When the Developer ID is present, it notarizes the zip with Apple and staples the ticket.
+
+A copy you build yourself opens without a warning on your Mac. If you send it to another Mac, macOS says it "could not verify Calculum is free of malware". Click **Done**, then go to **System Settings → Privacy & Security** and click **Open Anyway**, or remove the quarantine flag in Terminal:
+
+```sh
+xattr -dr com.apple.quarantine /Applications/Calculum.app
+```
 
 ## Development
 
