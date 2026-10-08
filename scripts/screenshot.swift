@@ -7,7 +7,7 @@ import AppKit
 import SwiftUI
 
 let output = URL(filePath: CommandLine.arguments[1])
-let title = "Calculum"
+let title = "Number Pantry"
 let width: CGFloat = 1320
 // nil fits the window to the content's height. Split views and lists need a fixed height.
 let height: CGFloat? = 820

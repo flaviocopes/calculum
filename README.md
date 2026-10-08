@@ -1,26 +1,26 @@
-<img src="docs/banner.png" alt="Calculum, 281 everyday calculators in a native Mac app" />
+<img src="docs/banner.png" alt="Number Pantry, 281 everyday calculators in a native Mac app" />
 
-Calculum is a free Mac app with 281 calculators for everyday decisions, from rent and mortgages to road trips, paint, payroll and bread dough. Type your numbers and the answer updates as you type, with the formula and the assumptions right next to it.
+Number Pantry is a free Mac app with 281 calculators for everyday decisions, from rent and mortgages to road trips, paint, payroll and bread dough. Type your numbers and the answer updates as you type, with the formula and the assumptions right next to it.
 
 It's the Mac version of [calculum.dev](https://calculum.dev). The calculators are the same ones, but here they run on your Mac, work offline, and keep your favorites and the calculations you saved. There's a command line tool too, so you can run any calculator from Terminal or a script.
 
-Read the announcement and watch the 1-minute demo on my blog: [I built Calculum for Mac, 281 calculators that work offline](https://flaviocopes.com/calculum-mac/).
+Read the announcement and watch the 1-minute demo on my blog: [I built Number Pantry for Mac, 281 calculators that work offline](https://flaviocopes.com/number-pantry/).
 
-[![Watch the 1-minute Calculum demo](docs/showreel-poster.jpg)](https://flaviocopes.com/calculum-mac/)
+[![Watch the 1-minute Number Pantry demo](docs/showreel-poster.jpg)](https://flaviocopes.com/number-pantry/)
 
 ## Download
 
-Get `Calculum-1.1.0.zip` from the [latest release](https://github.com/flaviocopes/calculum/releases/latest), unzip it, and drag Calculum to your Applications folder. It runs on macOS 15 Sequoia or later, on Apple silicon and Intel Macs.
+Get `Number Pantry-1.2.0.zip` from the [latest release](https://github.com/flaviocopes/number-pantry/releases/latest), unzip it, and drag Number Pantry to your Applications folder. It runs on macOS 15 Sequoia or later, on Apple silicon and Intel Macs.
 
 ### Opening it the first time
 
-Calculum is signed with my Apple Developer ID and notarized by Apple. The first time you open it, macOS asks if you're sure you want to open an app downloaded from the internet. Click **Open**.
+Number Pantry is signed with my Apple Developer ID and notarized by Apple. The first time you open it, macOS asks if you're sure you want to open an app downloaded from the internet. Click **Open**.
 
-On a work laptop you might not be able to install apps in `/Applications`. You can keep Calculum in the `Applications` folder inside your home folder instead.
+On a work laptop you might not be able to install apps in `/Applications`. You can keep Number Pantry in the `Applications` folder inside your home folder instead.
 
 ### Updates
 
-Once a day, Calculum asks GitHub whether there's a newer version. When there is, it shows what's new, and **Install and Relaunch** puts it in place of the old one. **Calculum → Check for Updates…** checks right away.
+Once a day, Number Pantry asks GitHub whether there's a newer version. When there is, it shows what's new, and **Install and Relaunch** puts it in place of the old one. **Number Pantry → Check for Updates…** checks right away.
 
 To turn off the daily check, run this in Terminal:
 
@@ -44,7 +44,7 @@ defaults write com.flaviocopes.calculum AppUpdaterAutomaticChecks -bool false
 
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="docs/screenshot-dark.png" />
-  <img src="docs/screenshot-light.png" alt="The Calculum window showing the mortgage payment calculator in the Housing category" />
+  <img src="docs/screenshot-light.png" alt="The Number Pantry window showing the mortgage payment calculator in the Housing category" />
 </picture>
 
 ## What's inside
@@ -72,7 +72,7 @@ defaults write com.flaviocopes.calculum AppUpdaterAutomaticChecks -bool false
 | Sustainability & waste | 14 | Vehicle, flight, electricity and home heating emissions |
 | Learning & career | 12 | Course return on investment, education cost, study plan, salary offers |
 
-## Using Calculum
+## Using Number Pantry
 
 ### Find a calculator
 
@@ -86,7 +86,7 @@ Press ⌘D on a calculator to add it to Favorites.
 
 Every calculator opens with realistic example numbers, so you see a result right away. Replace them with yours and the result updates as you type. The units sit next to each field, like `$`, `%`, `years` or `ft`.
 
-Calculum remembers the last numbers you typed in each calculator. **Reset** (⌘R) goes back to the example ones.
+Number Pantry remembers the last numbers you typed in each calculator. **Reset** (⌘R) goes back to the example ones.
 
 ### Read the result
 
@@ -129,7 +129,7 @@ The comparison puts the two results side by side and tells you how much the resu
 
 Pick your country at the bottom of the sidebar, or in **Settings**. It sets the currency, the number format, and metric or US customary units for every calculator. The 21 countries are the United States, Canada, the United Kingdom, Ireland, Australia, New Zealand, Denmark, Sweden, Norway, Germany, France, Italy, Spain, the Netherlands, Switzerland, India, Japan, Singapore, South Africa, Brazil and Mexico.
 
-Calculum never converts currencies or looks up live prices. You enter the amounts, and tax calculators ask for your rates instead of guessing them.
+Number Pantry never converts currencies or looks up live prices. You enter the amounts, and tax calculators ask for your rates instead of guessing them.
 
 ## Keyboard shortcuts
 
@@ -149,12 +149,12 @@ The `calculum` command runs the same calculators as the app, so you can get an a
 
 ### Install it
 
-Choose **Calculum → Install Command Line Tool…**. It links `/usr/local/bin/calculum` to the copy inside the app, and asks for your password if that folder needs it. The command stays up to date when the app updates itself.
+Choose **Number Pantry → Install Command Line Tool…**. It links `/usr/local/bin/calculum` to the copy inside the app, and asks for your password if that folder needs it. The command stays up to date when the app updates itself.
 
 You can also link it yourself:
 
 ```sh
-sudo ln -sf /Applications/Calculum.app/Contents/Helpers/calculum /usr/local/bin/calculum
+sudo ln -sf "/Applications/Number Pantry.app/Contents/Helpers/calculum" /usr/local/bin/calculum
 ```
 
 ### Use it
@@ -224,18 +224,20 @@ calculum road-trip-fuel-cost --json | jq -r .result.value
 calculum list cooking
 ```
 
+Run `calculum capabilities` for tasks and release history, or add `--json` for the machine-readable manifest.
+
 ## Privacy
 
-Every calculation runs on your Mac, so Calculum works offline. It goes online in two cases:
+Every calculation runs on your Mac, so Number Pantry works offline. It goes online in two cases:
 
-- Once a day, it asks GitHub whether there's a newer version of Calculum. It downloads one only when you click **Install and Relaunch**.
+- Once a day, it asks GitHub whether there's a newer version of Number Pantry. It downloads one only when you click **Install and Relaunch**.
 - When you click a source link or **Open on calculum.dev**, your browser opens that page.
 
 Your favorites, saved calculations and numbers stay in one file on your Mac, `~/Library/Application Support/Calculum/library.json`. **Settings → Show in Finder** opens its folder. There are no accounts and no analytics.
 
 ## Estimates, not guarantees
 
-The calculators give planning estimates, and they can be incomplete, outdated or wrong. Check the inputs, the assumptions and your local rules before acting on a result. Nothing in Calculum is financial, legal, tax, medical or other professional advice.
+The calculators give planning estimates, and they can be incomplete, outdated or wrong. Check the inputs, the assumptions and your local rules before acting on a result. Nothing in Number Pantry is financial, legal, tax, medical or other professional advice.
 
 ## Build it from source
 
@@ -247,13 +249,9 @@ Open `Calculum.xcodeproj` and press `⌘R`. To build the release zip from the te
 scripts/build-release.sh
 ```
 
-The script builds a universal app in `build/release/Release/Calculum.app`, with the `calculum` command inside, signs it with my Developer ID when that certificate is in the keychain, and ad hoc everywhere else, then zips it into `dist/`. When the Developer ID is present, it notarizes the zip with Apple and staples the ticket.
+The script builds a universal app in `build/release/Release/Number Pantry.app`, with the `calculum` command inside, signs it with my Developer ID when that certificate is in the keychain, and ad hoc everywhere else, then zips it into `dist/`. When the Developer ID is present, it notarizes the zip with Apple and staples the ticket.
 
-A copy you build yourself opens without a warning on your Mac. If you send it to another Mac, macOS says it "could not verify Calculum is free of malware". Click **Done**, then go to **System Settings → Privacy & Security** and click **Open Anyway**, or remove the quarantine flag in Terminal:
-
-```sh
-xattr -dr com.apple.quarantine /Applications/Calculum.app
-```
+A copy you build yourself opens without a warning on your Mac. If you send it to another Mac, macOS says it "could not verify Number Pantry is free of malware". Click **Done**, then go to **System Settings → Privacy & Security** and click **Open Anyway**.
 
 ## Development
 

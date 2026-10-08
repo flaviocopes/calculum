@@ -2,7 +2,7 @@ import AppKit
 import Foundation
 import Observation
 
-/// Everything Calculum remembers: favorites, recent calculators, saved
+/// Everything Number Pantry remembers: favorites, recent calculators, saved
 /// calculations, the last numbers entered in each calculator, and the country.
 /// It lives in one JSON file, `~/Library/Application Support/Calculum/library.json`.
 @MainActor
@@ -56,7 +56,7 @@ final class Library {
     let decoder = JSONDecoder()
     decoder.dateDecodingStrategy = .iso8601
     if let contents = try? decoder.decode(Contents.self, from: data) { return contents }
-    // Keep a file Calculum can't read, instead of overwriting it on the next save.
+    // Keep a file Number Pantry can't read, instead of overwriting it on the next save.
     let backup = fileURL.deletingPathExtension().appendingPathExtension("broken.json")
     try? FileManager.default.removeItem(at: backup)
     try? FileManager.default.moveItem(at: fileURL, to: backup)
@@ -165,7 +165,7 @@ final class Library {
       encoder.dateEncodingStrategy = .iso8601
       try encoder.encode(contents).write(to: fileURL, options: .atomic)
     } catch {
-      print("Calculum couldn't save its library: \(error.localizedDescription)")
+      print("Number Pantry couldn't save its library: \(error.localizedDescription)")
     }
   }
 }

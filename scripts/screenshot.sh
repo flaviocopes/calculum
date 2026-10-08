@@ -8,14 +8,15 @@ set -eu
 
 ROOT=$(CDPATH= cd -- "$(dirname "$0")/.." && pwd)
 cd "$ROOT"
-NAME=$(sed -n 's/^name: *//p' project.yml)
+NAME="Number Pantry"
+TARGET="Calculum"
 BUNDLE_ID=$(sed -n 's/^ *PRODUCT_BUNDLE_IDENTIFIER: *//p' project.yml | head -1).screenshot
 MACOS=$(sed -n 's/^ *macOS: *"\(.*\)"$/\1/p' project.yml | head -1)
 APP="$ROOT/build/screenshot/$NAME Screenshot.app"
 
 rm -rf "$APP"
 mkdir -p "$APP/Contents/MacOS" docs
-find "$NAME" -name '*.swift' ! -exec grep -q '^@main' {} \; -exec \
+find "$TARGET" -name '*.swift' ! -exec grep -q '^@main' {} \; -exec \
   swiftc -O -swift-version 6 -parse-as-library -target "$(uname -m)-apple-macos$MACOS" \
   -o "$APP/Contents/MacOS/Screenshot" scripts/screenshot.swift {} +
 

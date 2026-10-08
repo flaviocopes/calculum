@@ -7,7 +7,8 @@ set -eu
 
 ROOT=$(CDPATH= cd -- "$(dirname "$0")/.." && pwd)
 cd "$ROOT"
-NAME=$(sed -n 's/^name: *//p' project.yml)
+NAME="Number Pantry"
+TARGET="Calculum"
 VERSION=$(sed -n 's/^ *MARKETING_VERSION: "\(.*\)"$/\1/p' project.yml)
 BUILD="$ROOT/build/release"
 APP="$BUILD/Release/$NAME.app"
@@ -21,7 +22,7 @@ trap cleanup EXIT
 
 rm -rf "$BUILD" "$ZIP"
 mkdir -p dist
-xcodebuild -project "$NAME.xcodeproj" -target "$NAME" -configuration Release \
+xcodebuild -project "$TARGET.xcodeproj" -target "$TARGET" -configuration Release \
   ARCHS="arm64 x86_64" ONLY_ACTIVE_ARCH=NO SYMROOT="$BUILD" -quiet build
 
 lipo "$APP/Contents/MacOS/$NAME" -verify_arch arm64 x86_64

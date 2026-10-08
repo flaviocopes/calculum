@@ -6,8 +6,8 @@ options:
 settings:
   base:
     SWIFT_VERSION: "6.0"
-    MARKETING_VERSION: "1.1.0"
-    CURRENT_PROJECT_VERSION: "2"
+    MARKETING_VERSION: "1.2.0"
+    CURRENT_PROJECT_VERSION: "3"
     CODE_SIGN_IDENTITY: "-"
     CODE_SIGN_STYLE: Manual
 targets:
@@ -27,7 +27,9 @@ targets:
         PRODUCT_BUNDLE_IDENTIFIER: com.flaviocopes.calculum
         ASSETCATALOG_COMPILER_APPICON_NAME: AppIcon
         GENERATE_INFOPLIST_FILE: YES
-        INFOPLIST_KEY_CFBundleDisplayName: Calculum
+        INFOPLIST_KEY_CFBundleDisplayName: Number Pantry
+        PRODUCT_NAME: "Number Pantry"
+        PRODUCT_MODULE_NAME: Calculum
         INFOPLIST_KEY_LSApplicationCategoryType: public.app-category.productivity
         INFOPLIST_KEY_NSHumanReadableCopyright: "MIT License"
   # The calculum command, built into Calculum.app/Contents/Helpers. It shares the

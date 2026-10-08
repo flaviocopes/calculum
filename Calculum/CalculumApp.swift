@@ -6,11 +6,11 @@ struct CalculumApp: App {
   @State private var model = AppModel(engine: Engine(), library: Library())
 
   init() {
-    AppUpdater.shared.start(repository: "flaviocopes/calculum")
+    AppUpdater.shared.start(repository: "flaviocopes/number-pantry")
   }
 
   var body: some Scene {
-    Window("Calculum", id: "main") {
+    Window("Number Pantry", id: "main") {
       ContentView(model: model)
         .frame(minWidth: 980, minHeight: 620)
     }

@@ -13,10 +13,10 @@ enum CommandLineTool {
   static func install() {
     let tool = bundled
     guard FileManager.default.isExecutableFile(atPath: tool.path) else {
-      return alert("The calculum command isn't inside this copy of Calculum.", "Download Calculum again from GitHub, or build it with scripts/build-release.sh.")
+      return alert("The calculum command isn't inside this copy of Number Pantry.", "Download Number Pantry again from GitHub, or build it with scripts/build-release.sh.")
     }
     guard !tool.path.contains("/AppTranslocation/") else {
-      return alert("Move Calculum to your Applications folder first.", "macOS is running it from a temporary location, and the command would stop working.")
+      return alert("Move Number Pantry to your Applications folder first.", "macOS is running it from a temporary location, and the command would stop working.")
     }
 
     if (try? linkDirectly(to: tool)) != nil {
@@ -31,7 +31,7 @@ enum CommandLineTool {
     if error == nil {
       installed()
     } else if (error?[NSAppleScript.errorNumber] as? Int) != -128 {
-      alert("Calculum couldn't install the command.", "Run this in Terminal instead:\n\nsudo ln -sf '\(tool.path)' /usr/local/bin/calculum")
+      alert("Number Pantry couldn't install the command.", "Run this in Terminal instead:\n\nsudo ln -sf '\(tool.path)' /usr/local/bin/calculum")
     }
   }
 

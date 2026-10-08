@@ -1,5 +1,5 @@
-// calculum: the Calculum calculators on the command line. It ships inside the app,
-// in Calculum.app/Contents/Helpers, and runs the same engine.js as the app.
+// calculum: the Number Pantry calculators on the command line. It ships inside the app,
+// in Number Pantry.app/Contents/Helpers, and runs the same engine.js as the app.
 
 import Foundation
 
@@ -19,14 +19,14 @@ enum Paths {
     let folder = executable.deletingLastPathComponent()
     return [
       folder.appending(path: "../Resources/engine.js"),
-      folder.appending(path: "Calculum.app/Contents/Resources/engine.js"),
+      folder.appending(path: "Number Pantry.app/Contents/Resources/engine.js"),
     ].first { FileManager.default.fileExists(atPath: $0.path) }
   }
 
   static var version: String {
     let plist = executable.deletingLastPathComponent().appending(path: "../Info.plist")
     let info = NSDictionary(contentsOf: plist)
-    return info?["CFBundleShortVersionString"] as? String ?? "dev"
+    return info?["CFBundleShortVersionString"] as? String ?? "1.2.0"
   }
 
   /// The country chosen in the app, if there is one.
@@ -296,13 +296,14 @@ struct CLI {
   }
 
   static let usage = """
-    Calculum: 281 everyday calculators on the command line.
+    Number Pantry: 281 everyday calculators on the command line.
 
     Usage:
       calculum <calculator> [name=value ...]   Calculate. Inputs you leave out keep their example values
       calculum show <calculator>               The inputs, their example values, the formula and the assumptions
       calculum search <words>                  Find calculators
       calculum list [category]                 Every calculator, or the ones in a category
+      capabilities                             What the tool can do, and its release history
       calculum categories                      The 20 categories
       calculum countries                       The countries for --country
 
@@ -326,6 +327,42 @@ extension String {
 
   func leftPadded(to length: Int) -> String {
     count >= length ? self : String(repeating: "0", count: length - count) + self
+  }
+}
+
+@MainActor
+func printCapabilities(json: Bool) throws {
+  let manifest: [String: Any] = [
+    "name": "calculum",
+    "version": Paths.version,
+    "summary": "Run the 281 Number Pantry calculators with country-specific units and formatting.",
+    "capabilities": [
+      ["description": "Find calculators by name or topic", "command": "calculum search paint"],
+      ["description": "List calculators in a category", "command": "calculum list taxes --json"],
+      ["description": "Show the inputs and assumptions of a calculator", "command": "calculum show mortgage-payment --json"],
+      ["description": "Calculate a result with your inputs", "command": "calculum mortgage-payment price=450000 rate=5.5 --country US"],
+      ["description": "Calculate with country-specific units and formatting", "command": "calculum paint-quantity perimeter=52.493 --country US -q"],
+      ["description": "List supported countries", "command": "calculum countries --json"]
+    ],
+    "changelog": [
+      ["version": "1.2.0", "date": "2026-10-08", "changes": ["Renamed the app to Number Pantry. The calculum command keeps its existing name.", "New capabilities command lists tasks and release history."]],
+      ["version": "1.1.0", "date": "2026-10-03", "changes": ["Signed and notarized Mac release."]],
+      ["version": "1.0.0", "date": "2026-10-02", "changes": ["First release: 281 calculators with country-specific units and formatting."]]
+    ]
+  ]
+  if json {
+    let data = try JSONSerialization.data(withJSONObject: manifest, options: [.prettyPrinted, .sortedKeys, .withoutEscapingSlashes])
+    print(String(decoding: data, as: UTF8.self))
+  } else {
+    print("calculum \(Paths.version)\n" + (manifest["summary"] as! String) + "\n\nWhat it can do:")
+    for capability in manifest["capabilities"] as! [[String: String]] {
+      print("  \(capability["description"]!)\n    $ \(capability["command"]!)")
+    }
+    print("\nChanges:")
+    for release in manifest["changelog"] as! [[String: Any]] {
+      print("  \(release["version"]!) (\(release["date"]!))")
+      for change in release["changes"] as! [String] { print("    - \(change)") }
+    }
   }
 }
 
@@ -353,6 +390,10 @@ do {
     exit(0)
   }
   json = takeFlag("--json")
+  if arguments.first == "capabilities" {
+    try printCapabilities(json: json)
+    exit(0)
+  }
   quiet = takeFlag("-q", "--quiet")
   if let index = arguments.firstIndex(where: { $0 == "--country" || $0.hasPrefix("--country=") }) {
     let argument = arguments.remove(at: index)
@@ -369,7 +410,7 @@ do {
   }
 
   guard let engineURL = Paths.engine, let source = try? String(contentsOf: engineURL, encoding: .utf8) else {
-    throw CLIError(message: "Can't find engine.js. Run calculum from Calculum.app/Contents/Helpers, or set CALCULUM_ENGINE.")
+    throw CLIError(message: "Can't find engine.js. Run calculum from Number Pantry.app/Contents/Helpers, or set CALCULUM_ENGINE.")
   }
   let engine = Engine(source: source)
   let countries = engine.catalog.countries

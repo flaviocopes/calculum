@@ -20,7 +20,7 @@ final class Engine {
   init(source: String) {
     context = JSContext()!
     context.exceptionHandler = { _, exception in
-      print("Calculum engine: \(exception?.toString() ?? "unknown error")")
+      print("Number Pantry engine: \(exception?.toString() ?? "unknown error")")
     }
     context.evaluateScript(source)
     api = context.objectForKeyedSubscript("CalculumEngine")

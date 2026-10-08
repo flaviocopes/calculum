@@ -14,7 +14,7 @@ struct SettingsView: View {
           }
         }
       } footer: {
-        Text("Sets the currency, the number format and the units, metric or US customary, in every calculator. Calculum never converts currencies: you enter the amounts.")
+        Text("Sets the currency, the number format and the units, metric or US customary, in every calculator. Number Pantry never converts currencies: you enter the amounts.")
       }
 
       Section {
@@ -39,7 +39,7 @@ struct SettingsView: View {
       } header: {
         Text("Updates")
       } footer: {
-        Text("Takes effect the next time Calculum opens. Calculum → Check for Updates… always works.")
+        Text("Takes effect the next time Number Pantry opens. Number Pantry → Check for Updates… always works.")
       }
     }
     .formStyle(.grouped)

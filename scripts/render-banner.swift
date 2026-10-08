@@ -8,7 +8,7 @@
 import AppKit
 import SwiftUI
 
-let name = "Calculum"
+let name = "Number Pantry"
 let tagline = "281 everyday calculators,\nnative on your Mac."
 let chips: [(text: String, tone: Color)] = [
   ("Works offline", Color(hex: 0x4FD1A1)),
@@ -28,7 +28,7 @@ let sun = Color(hex: 0xFFC83D)
 let sky = Color(hex: 0x5AA9FF)
 
 let root = URL(filePath: #filePath).deletingLastPathComponent().deletingLastPathComponent()
-let iconSource = root.appending(path: "\(name)/AppIcon.icon")
+let iconSource = root.appending(path: "Calculum/AppIcon.icon")
 let screenshot = root.appending(path: "docs/screenshot-light.png")
 let output = root.appending(path: "docs/banner.png")
 // scripts/screenshot.sh leaves a 48pt margin around the window for its shadow.
@@ -114,7 +114,7 @@ struct Banner: View {
           .frame(width: 132, height: 132)
           .shadow(color: .black.opacity(0.18), radius: 16, y: 8)
         Text(name)
-          .font(.system(size: 78, weight: .heavy, design: .rounded))
+          .font(.system(size: 61, weight: .heavy, design: .rounded))
           .tracking(-1.8)
           .foregroundStyle(ink)
           .padding(.top, 22)
