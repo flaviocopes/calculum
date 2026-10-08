@@ -12,7 +12,7 @@ TARGET="Calculum"
 VERSION=$(sed -n 's/^ *MARKETING_VERSION: "\(.*\)"$/\1/p' project.yml)
 BUILD="$ROOT/build/release"
 APP="$BUILD/Release/$NAME.app"
-ZIP="$ROOT/dist/$NAME-$VERSION.zip"
+ZIP="$ROOT/dist/Number-Pantry-$VERSION.zip"
 CHECK=$(mktemp -d)
 
 cleanup() {

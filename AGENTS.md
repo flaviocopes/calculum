@@ -27,7 +27,7 @@ A SwiftUI macOS app with the 281 calculators from calculum.dev, plus the `calcul
 Requirements: macOS 15 or later, Xcode 26 (the `.icon` needs it).
 
 ```bash
-scripts/build-release.sh           # universal Release build, Developer ID signed and notarized when the certificate is in the keychain, dist/Number Pantry-<version>.zip
+scripts/build-release.sh           # universal Release build, Developer ID signed and notarized when the certificate is in the keychain, dist/Number-Pantry-<version>.zip
 open "build/release/Release/Number Pantry.app"
 xcodegen generate                  # after editing project.yml
 swift scripts/check-engine.swift   # runs every calculator in JavaScriptCore, US and metric

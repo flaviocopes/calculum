@@ -10,7 +10,7 @@ Read the announcement and watch the 1-minute demo on my blog: [I built Number Pa
 
 ## Download
 
-Get `Number Pantry-1.2.0.zip` from the [latest release](https://github.com/flaviocopes/number-pantry/releases/latest), unzip it, and drag Number Pantry to your Applications folder. It runs on macOS 15 Sequoia or later, on Apple silicon and Intel Macs.
+Get `Number-Pantry-1.2.0.zip` from the [latest release](https://github.com/flaviocopes/number-pantry/releases/latest), unzip it, and drag Number Pantry to your Applications folder. It runs on macOS 15 Sequoia or later, on Apple silicon and Intel Macs.
 
 ### Opening it the first time
 
